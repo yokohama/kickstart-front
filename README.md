@@ -4,6 +4,8 @@
 2. プロジェクトにアプリを作成する
 3. Firebaseで作られた、サービス構築に必要な情報を整理する
 4. Google PSIのAPIキーを取得する
+5. Vercelにプロジェクトを作成する
+
 
 ## 1. firebaseのプロジェクトを作成する
 - https://console.firebase.google.com/u/0/
@@ -95,6 +97,23 @@ https://developers.google.com/speed/docs/insights/v5/get-started
 | messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
+
+
+## 5. Vercelにプロジェクトを作成する
+
+1. サイトにアクセス
+https://vercel.com/dashboard
+
+2. プロジェクトを作成
+
+<img src="https://user-images.githubusercontent.com/1023421/193399755-da17175b-13e4-47c9-8efa-0b38a66471a2.png" width="400">
+
+3. gitHubと連携
+
+<img src="https://user-images.githubusercontent.com/1023421/193399800-e055c90a-60cf-4809-941c-c94d5f5ece03.png" width="400">
+
+
+
 
 
 
