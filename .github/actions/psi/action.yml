@@ -1,0 +1,34 @@
+inputs:
+  url:
+    description: ''
+    required: true
+  mobile_threshold:
+    description: ''
+    required: true
+  desktop_threshold:
+    description: ''
+    required: true
+  key:
+    description: ''
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: "[ Mobile ] ${{ inputs.url }}"
+      uses: jakepartusch/psi-action@v1.2
+      id: mobile_page_speed_insigths
+      with:
+        url: ${{ inputs.url }}
+        threshold: ${{ inputs.mobile_threshold }}
+        strategy: mobile
+        key: ${{ inputs.key }}
+  
+    - name: "[ Desktop ] ${{ inputs.url }}"
+      uses: jakepartusch/psi-action@v1.2
+      id: desktop_page_speed_insigths
+      with:
+        url: ${{ inputs.url }}
+        threshold: ${{ inputs.desktop_threshold }}
+        strategy: desktop
+        key: ${{ inputs.key }}
