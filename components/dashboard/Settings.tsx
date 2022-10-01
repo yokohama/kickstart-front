@@ -18,7 +18,8 @@ export const Settings = ({alertList, setAlertList}: DashboardProps) => {
     currentUser?.getIdToken(true)
       .then(idToken => {
         console.log(idToken)
-        fetch('http://localhost:4010/users', {
+        console.log(process.env.NEXT_PUBLIC_API_ENDPOINT_URL)
+        fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/users`, {
           headers: { 'Authorization': `Bearer: ${idToken}` }
         })
           .then(res => console.log(res))
