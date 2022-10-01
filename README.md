@@ -77,7 +77,7 @@
 | storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
+| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 |  |
 | Vercel development url | front / github acstions / secrets | versel / Settings / Domains |  |
 | Vercel production url | front / github acstions / secrets | versel / Settings / Domains |  |
 
