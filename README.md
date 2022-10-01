@@ -77,7 +77,9 @@
 | storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 |  |
+| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
+| Vercel development url | front / github acstions / secrets | versel / Settings / Domains |  |
+| Vercel production url | front / github acstions / secrets | versel / Settings / Domains |  |
 
 
 ## 4. Google PSIのAPIキーを取得する
@@ -105,6 +107,8 @@ https://developers.google.com/speed/docs/insights/v5/get-started
 | messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
+| Vercel development url | front / github acstions / secrets | versel / Settings / Domains |  |
+| Vercel production url | front / github acstions / secrets | versel / Settings / Domains |  |
 
 
 ## 5. Vercelにプロジェクトを作成する
@@ -176,6 +180,18 @@ https://vercel.com/dashboard
 このURLをFirebase側で許可するので、控えておいて下さい。
 <img src="https://user-images.githubusercontent.com/1023421/193401948-7a2872d5-be1c-4ba3-9f10-8424e0bbe5b5.png" width="400">
 
+| 参照名 | 使用箇所 | 取得方法 | ステータス |
+| :--- | :--- | :--- | :--- |
+| apiKey | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| authDomain | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| projectId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
+| Vercel development url | front / github acstions / secrets | versel / Settings / Domains |  |
+| Vercel production url | front / github acstions / secrets | versel / Settings / Domains | 取得済 |
+
 ### 2. Firebaseに移動
 
 <img src="https://user-images.githubusercontent.com/1023421/193402189-c9edde47-efa6-49c1-a213-c9fecd4703f5.png" width="400">
@@ -221,6 +237,19 @@ Vercelから発行されたURLにアクセスしてログインの動作確認�
 
 <img src="https://user-images.githubusercontent.com/1023421/193403436-70ea5160-3751-42de-866c-f338b63fffc0.png" width="400">
 
+
+| 参照名 | 使用箇所 | 取得方法 | ステータス |
+| :--- | :--- | :--- | :--- |
+| apiKey | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| authDomain | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| projectId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
+| Vercel development url | front / github acstions / secrets | versel / Settings / Domains | 取得済 |
+| Vercel production url | front / github acstions / secrets | versel / Settings / Domains | 取得済 |
+
 ### 5. 完了
 firebase側でこのドメインも許可するので控えておく。
 
@@ -234,11 +263,30 @@ firebase側でこのドメインも許可するので控えておく。
 
 ### 7. github actionsの設定をする
 
-PSIで取得したAPIキー
+<img src="https://user-images.githubusercontent.com/1023421/193410129-64e79121-90d8-4d48-a433-68343a48e107.png" width="400">
 
-DEVELOPMENT_ULR（Vercelで作成したURL）
+| 参照名 | 使用箇所 | 取得方法 | ステータス |
+| :--- | :--- | :--- | :--- |
+| apiKey | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| authDomain | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| projectId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
+| Vercel development url | front / github acstions / secrets | versel / Settings / Domains |  |
+| Vercel production url | front / github acstions / secrets | versel / Settings / Domains | 取得済 |
 
-PRODUCTION_URL（Vercelでデフォルトで作成されたURL)
+上記取得済みの内容を以下のようにセットします。
+
+| 変数名 | 3-2の参照名 |
+| :--- | :--- |
+| DEVELOPMENT_URL | Vercel development url |
+| PRODUCTION_URL | Vercel production url |
+| PSI_APIKEY | PSI apoiKey |
+
+<img src="https://user-images.githubusercontent.com/1023421/193410352-29342f94-7bd6-4877-9958-d1511609fa60.png" width="400">
+
 
 ## 8. ローカル開発環境の構築をする
 yarn
