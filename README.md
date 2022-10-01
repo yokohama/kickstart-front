@@ -1,12 +1,18 @@
 # kickstart-front
 
+## 目次
 1. リポジトリをforkする
 2. firebaseのプロジェクトを作成する
 3. プロジェクトにアプリを作成する
 4. Google PSIのAPIキーを取得する
-5. Vercelにプロジェクトを作成する
+5. Vercelにプロジェクトを作成して公開する
+6. 公開したURLをfirebase側で許可する
+7. デプロイの設定をする
+8. ローカルでの開発環境の構築
 
 ## 1. リポジトリをforkする
+- githubからforkする。fork先名は解りやすく同じ名前にして下さい。もし変更する場合は、以降`kickstart-front`を`変更した名前`に読み替えて作業をおこなって下さい。
+- forkした先のリポジトリに、`development`ブランチを作成して下さい。
 
 ## 2. firebaseのプロジェクトを作成する
 - https://console.firebase.google.com/u/0/
@@ -158,8 +164,51 @@ https://vercel.com/dashboard
 
 <img src="https://user-images.githubusercontent.com/1023421/193401238-b14f390d-3e72-45da-bf50-48196a8e5c15.png" width="400">
 
+## 6. 公開したURLをfirebase側で許可する
 
-## インストール
+1. Vercelから与えられたドメインを確認する
+<img src="https://user-images.githubusercontent.com/1023421/193401804-ffb42c14-3915-4930-b7b8-553a0c86d3d3.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/1023421/193401843-d91a38bc-8775-4aae-95d9-c9fd1ef1dba8.png" width="400">
+
+このURLをFirebase側で許可するので、控えておいて下さい。
+<img src="https://user-images.githubusercontent.com/1023421/193401948-7a2872d5-be1c-4ba3-9f10-8424e0bbe5b5.png" width="400">
+
+2. Firebaseに移動
+
+<img src="https://user-images.githubusercontent.com/1023421/193402189-c9edde47-efa6-49c1-a213-c9fecd4703f5.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/1023421/193402223-e09b1a2a-d8f3-4b77-a66b-31f01a885a5c.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/1023421/193402257-459dee50-c46e-49b4-98f9-8d3fc34dbc38.png" width="400">
+
+<img src="https://user-images.githubusercontent.com/1023421/193402281-ac684341-56cc-44db-8c8e-9ea3d28f0607.png" width="400">
+
+Vercelから発行された先程のドメインをセットする。
+
+<img src="https://user-images.githubusercontent.com/1023421/193402326-59a6f234-9920-4c6b-a6ba-4019cb1b4b79.png" width="400">
+
+Vercelから発行されたURLにアクセスしてログインの動作確認をしていく。
+
+<img src="https://user-images.githubusercontent.com/1023421/193402417-ca6b5d5d-38a8-4602-a348-d7dc2ec3ba13.png" width="400">
+
+成功していれば、Googleのアカウント選択画面が表示される。
+
+<img src="https://user-images.githubusercontent.com/1023421/193402429-658da070-1bb2-4a02-94be-682202b0ce4c.png" width="400">
+
+ログアウトも確認する。
+
+<img src="https://user-images.githubusercontent.com/1023421/193402437-c062bd64-1dd1-4cc0-bec8-7eca57dfddde.png" width="400">
+
+## 7. デプロイの設定をするイの設定をする
+Vercelにdevelopment用のドメインの追加を書く
+追加したドメインをfirefoxで許可する方法を書く
+PSIの設定を書く
+デプロイの仕方を書く
+デプロイ完了の動作確認方法を書く
+
+
+## 8. ローカルでの開発閑居の構築
 yarn
 
 ## github / Secrets / Actions /Enviroment secrets
