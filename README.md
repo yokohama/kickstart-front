@@ -8,7 +8,7 @@
 5. Vercelにプロジェクトを作成して公開する
 6. 公開したURLをfirebase側で許可する
 7. デプロイの設定をする
-8. ローカル開発環境の構築
+8. ローカル開発環境の構築をする
 9. デプロイ
 10. API Gatewayの設定
 
@@ -202,14 +202,14 @@ Vercelから発行されたURLにアクセスしてログインの動作確認�
 
 <img src="https://user-images.githubusercontent.com/1023421/193402437-c062bd64-1dd1-4cc0-bec8-7eca57dfddde.png" width="400">
 
-## 7. デプロイの設定をするイの設定をする
+## 7. デプロイの設定をする
 Vercelにdevelopment用のドメインの追加を書く
 追加したドメインをfirefoxで許可する方法を書く
 PSIの設定を書く
 デプロイの仕方を書く
 デプロイ完了の動作確認方法を書く
 
-## 8. ローカル開発環境の構築
+## 8. ローカル開発環境の構築をする
 yarn
 mockサーバーの起動
 mockURLの設定
