@@ -8,7 +8,8 @@
 5. Vercelにプロジェクトを作成して公開する
 6. 公開したURLをfirebase側で許可する
 7. デプロイの設定をする
-8. ローカルでの開発環境の構築
+8. ローカル開発環境の構築
+9. デプロイ
 
 ## 1. リポジトリをforkする
 - githubからforkする。fork先名は解りやすく同じ名前にして下さい。もし変更する場合は、以降`kickstart-front`を`変更した名前`に読み替えて作業をおこなって下さい。
@@ -208,24 +209,7 @@ PSIの設定を書く
 デプロイ完了の動作確認方法を書く
 
 
-## 8. ローカルでの開発閑居の構築
+## 8. ローカル開発環境の構築
 yarn
 
-## github / Secrets / Actions /Enviroment secrets
-DEVELOPMENT_URL=TODO: vercelのpreviewのdevelopmentのURL
-PRODUCTION_URL=TODO: vercelのmainのURL
-PSI_APIKEY=TODO: google page speed insights (https://developers.google.com/speed/docs/insights/v5/get-started?hl=ja)
-
-## .env.local
-NEXT_PUBLIC_FIREBASE_API_KEY=TODO: 
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=TODO: 
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=TODO: 
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=TODO: firebase > 構築 > Storage > Files > gs://以降のドメイン
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=TODO: 
-NEXT_PUBLIC_FIREBASE_APP_ID=TODO: 
-
-TODO: firebase > プロジェクトの概要 > プロジェクトの設定 > ウェブAPIキー
-
-## env
-- *ステージング*　https://next-startup-front-dev.yuhei.yokohama/
-- *本番*　https://next-startup-front.yuhei.yokohama/
+## 9. デプロイ
