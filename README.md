@@ -237,6 +237,10 @@ Vercelから発行されたURLにアクセスしてログインの動作確認�
 
 <img src="https://user-images.githubusercontent.com/1023421/193403436-70ea5160-3751-42de-866c-f338b63fffc0.png" width="400">
 
+### 5. 完了
+firebase側でこのドメインも許可するので控えておく。
+
+<img src="https://user-images.githubusercontent.com/1023421/193403487-ea6769f0-4c30-4778-9f64-a636c9f759ea.png" width="400">
 
 | 参照名 | 使用箇所 | 取得方法 | ステータス |
 | :--- | :--- | :--- | :--- |
@@ -249,11 +253,6 @@ Vercelから発行されたURLにアクセスしてログインの動作確認�
 | PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
 | Vercel development url | front / github acstions / secrets | versel / Settings / Domains | 取得済 |
 | Vercel production url | front / github acstions / secrets | versel / Settings / Domains | 取得済 |
-
-### 5. 完了
-firebase側でこのドメインも許可するので控えておく。
-
-<img src="https://user-images.githubusercontent.com/1023421/193403487-ea6769f0-4c30-4778-9f64-a636c9f759ea.png" width="400">
 
 ### 6. firebase側でdevelopment用のURLを許可する
 
