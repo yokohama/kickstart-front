@@ -9,8 +9,9 @@
 6. 公開したURLをfirebase側で許可する
 7. developmentのデプロイの環境を用意する
 8. ローカル開発環境の構築をする
-9. デプロイ
-10. API Gatewayの設定
+9. mockサーバーのセットアップと起動
+10. デプロイ
+11. API Gatewayの設定
 
 ## 1. リポジトリをforkする
 ### 1. githubからforkする。fork先名は解りやすく同じ名前にして下さい。もし変更する場合は、以降`kickstart-front`を`変更した名前`に読み替えて作業をおこなって下さい。
@@ -276,15 +277,47 @@ firebase側でこのドメインも許可するので控えておく。
 
 
 ## 8. ローカル開発環境の構築をする
-yarn
+
+### 1. .env.localファイルを用意する
+```
+$ cd kickstart-front
+$ touch .env.local
+```
+.evn.localの中身に、以下の様に記入します。
+
+```
+NEXT_PUBLIC_FIREBASE_API_KEY=＜7-4の、apiKey＞
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=＜7-4の、authDomain＞
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=＜7-4の、projectId＞
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=＜7-4の、storageBucket＞
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=＜7-4の、messagingSenderId＞
+NEXT_PUBLIC_FIREBASE_APP_ID=＜7-4の、appId＞
+                                                                                
+API_ENDPOINT_URL=http://localhost:4010
+```
+
+### 2. node_modulesをインストール
+```
+$ yarn
+```
+
+### 3. 起動
+```
+$ npm run dev
+```
+これで、firebaseを使用したログインまで動作確認ができます。
+
+## 9. mockサーバーのセットアップと起動
+
+modkのセットアップ
 mockサーバーの起動
 mockURLの設定
 
-## 9. デプロイ
+## 10. デプロイ
 デプロイの仕方を書く
 
 デプロイ完了の動作確認方法を書く
 
 
 
-## 10. API Gatewayの設定
+## 11. API Gatewayの設定
