@@ -2,6 +2,8 @@
 
 1. firebaseのプロジェクトを作成する
 2. プロジェクトにアプリを作成する
+3. Firebaseで作られた、サービス構築に必要な情報を整理する
+4. Google PSIのAPIキーを取得する
 
 ## 1. firebaseのプロジェクトを作成する
 - https://console.firebase.google.com/u/0/
@@ -57,17 +59,43 @@
 
 ## 3. Firebaseで作られた、サービス構築に必要な情報を整理する
 それぞれの環境で必要になる、以下のFirebaseの情報を収集します。2-2で取得した情報を忘れた場合は、以下の取得方法を参考にして値を控えて下さい。
-| 参照名 | 使用箇所 | 取得方法 |
-| :--- | :--- | :--- |
-| apiKey | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ |
-| authDomain | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ |
-| projectId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ |
-| storageBucket | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ |
-| messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ |
-| appId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ |
+| 参照名 | 使用箇所 | 取得方法 | ステータス |
+| :--- | :--- | :--- | :--- |
+| apiKey | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| authDomain | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| projectId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 |  |
 
 
-## Google PSIのAPIキーを取得する
+## 4. Google PSIのAPIキーを取得する
+
+1. サイトにアクセス
+https://developers.google.com/speed/docs/insights/v5/get-started
+
+<img src="https://user-images.githubusercontent.com/1023421/193399235-e26e4a63-2856-4dbd-b2ca-7f64ac563b1c.png" width="400">
+
+2. 2で作成したプロジェクトを選択して作成
+
+<img src="https://user-images.githubusercontent.com/1023421/193399300-e8b3e3ff-3d92-4526-a813-291e43960a57.png" width="400">
+
+3. APIキーを取得する
+この内容はメモしておいて下さい。
+
+<img src="https://user-images.githubusercontent.com/1023421/193399373-11be433f-dd69-4888-8ebc-9c17054e24ad.png" width="400">
+
+| 参照名 | 使用箇所 | 取得方法 | ステータス |
+| :--- | :--- | :--- | :--- |
+| apiKey | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| authDomain | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| projectId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
+| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
+
 
 
 ## インストール
