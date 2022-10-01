@@ -264,21 +264,9 @@ firebase側でこのドメインも許可するので控えておく。
 
 <img src="https://user-images.githubusercontent.com/1023421/193410129-64e79121-90d8-4d48-a433-68343a48e107.png" width="400">
 
-| 参照名 | 使用箇所 | 取得方法 | ステータス |
-| :--- | :--- | :--- | :--- |
-| apiKey | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| authDomain | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| projectId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
-| Vercel development url | front / github acstions / secrets | versel / Settings / Domains |  |
-| Vercel production url | front / github acstions / secrets | versel / Settings / Domains | 取得済 |
+7-4までで、取得済みの内容を以下のようにセットします。
 
-上記取得済みの内容を以下のようにセットします。
-
-| 変数名 | 3-2の参照名 |
+| 変数名 | 7-4の参照名 |
 | :--- | :--- |
 | DEVELOPMENT_URL | Vercel development url |
 | PRODUCTION_URL | Vercel production url |
