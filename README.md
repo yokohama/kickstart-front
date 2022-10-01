@@ -7,14 +7,14 @@
 4. Google PSIのAPIキーを取得する
 5. Vercelにプロジェクトを作成して公開する
 6. 公開したURLをfirebase側で許可する
-7. デプロイの設定をする
+7. developmentのデプロイの環境を用意する
 8. ローカル開発環境の構築をする
 9. デプロイ
 10. API Gatewayの設定
 
 ## 1. リポジトリをforkする
-- githubからforkする。fork先名は解りやすく同じ名前にして下さい。もし変更する場合は、以降`kickstart-front`を`変更した名前`に読み替えて作業をおこなって下さい。
-- forkした先のリポジトリに、`development`ブランチを作成して下さい。
+1. githubからforkする。fork先名は解りやすく同じ名前にして下さい。もし変更する場合は、以降`kickstart-front`を`変更した名前`に読み替えて作業をおこなって下さい。
+2. forkした先のリポジトリに、`development`ブランチを作成して下さい。
 
 ## 2. firebaseのプロジェクトを作成する
 - https://console.firebase.google.com/u/0/
@@ -202,12 +202,39 @@ Vercelから発行されたURLにアクセスしてログインの動作確認�
 
 <img src="https://user-images.githubusercontent.com/1023421/193402437-c062bd64-1dd1-4cc0-bec8-7eca57dfddde.png" width="400">
 
-## 7. デプロイの設定をする
-Vercelにdevelopment用のドメインの追加を書く
-追加したドメインをfirefoxで許可する方法を書く
+## 7. developmentブランチのデプロイの環境を用意する
+1-2で、既にdevelopmentブランチが作成されている前提です。まだの場合は先に作成して下さい。
+
+1. Vercelにdevelopment用のドメインを追加
+
+<img src="https://user-images.githubusercontent.com/1023421/193403329-ed6579da-7001-4de6-a527-af58a9c1f2a4.png" width="400">
+
+2. サブドメインは自由に作成できるので、被らなそうな名前かつ解りやすい名前を入力して追加。
+
+<img src="https://user-images.githubusercontent.com/1023421/193403376-ed87b488-f203-4190-8a6d-00fc32933aab.png" width="400">
+
+3. 追加されたので編集をする
+
+<img src="https://user-images.githubusercontent.com/1023421/193403412-4b29d3ea-8ea4-4c25-9a65-d565aa9dda7a.png" width="400">
+
+4. `development`ブランチを入力してセーブ
+
+<img src="https://user-images.githubusercontent.com/1023421/193403436-70ea5160-3751-42de-866c-f338b63fffc0.png" width="400">
+
+5. 完了
+firebase側でこのドメインも許可するので控えておく。
+
+<img src="https://user-images.githubusercontent.com/1023421/193403487-ea6769f0-4c30-4778-9f64-a636c9f759ea.png" width="400">
+
+6. firebase側でdevelopment用のURLを許可する
+
+6を参考にして、7-5で作成したdevelopment用のドメインをfirebaseに追加して下さい。firebase側で以下の様になっていればOKです。
+
+<img src="https://user-images.githubusercontent.com/1023421/193403603-6d6a58cb-6f28-4aa1-9993-d8e4a95dc3da.png" width="400">
+
+7. PSIの設定をする。
+
 PSIの設定を書く
-デプロイの仕方を書く
-デプロイ完了の動作確認方法を書く
 
 ## 8. ローカル開発環境の構築をする
 yarn
@@ -215,5 +242,10 @@ mockサーバーの起動
 mockURLの設定
 
 ## 9. デプロイ
+デプロイの仕方を書く
+
+デプロイ完了の動作確認方法を書く
+
+
 
 ## 10. API Gatewayの設定
