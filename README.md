@@ -232,9 +232,13 @@ firebase側でこのドメインも許可するので控えておく。
 
 <img src="https://user-images.githubusercontent.com/1023421/193403603-6d6a58cb-6f28-4aa1-9993-d8e4a95dc3da.png" width="400">
 
-7. PSIの設定をする。
+7. github actionsの設定をする
 
-PSIの設定を書く
+PSIで取得したAPIキー
+
+DEVELOPMENT_ULR（Vercelで作成したURL）
+
+PRODUCTION_URL（Vercelでデフォルトで作成されたURL)
 
 ## 8. ローカル開発環境の構築をする
 yarn
