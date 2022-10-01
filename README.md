@@ -149,6 +149,14 @@ https://vercel.com/dashboard
 
 <img src="https://user-images.githubusercontent.com/1023421/193400888-3bb9f897-2363-4ed7-a6c2-259243f36cce.png" width="400">
 
+10. 「Congratulations!」成功です
+ダッシュボードに戻ります。
+
+<img src="https://user-images.githubusercontent.com/1023421/193401142-6e2eb8b9-334c-46e3-8df4-169cd4d888e2.png" width="400">
+
+11. 公開されたURLで表示されることを確認します。
+
+<img src="https://user-images.githubusercontent.com/1023421/193401238-b14f390d-3e72-45da-bf50-48196a8e5c15.png" width="400">
 
 
 ## インストール
