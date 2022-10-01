@@ -293,7 +293,7 @@ NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=＜7-4の、storageBucket＞
 NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=＜7-4の、messagingSenderId＞
 NEXT_PUBLIC_FIREBASE_APP_ID=＜7-4の、appId＞
                                                                                 
-API_ENDPOINT_URL=http://localhost:4010
+NEXT_PUBLIC_API_ENDPOINT_URL=http://localhost:4010
 ```
 
 ### 2. node_modulesをインストール
