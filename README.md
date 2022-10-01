@@ -1,13 +1,14 @@
 # kickstart-front
 
-1. firebaseのプロジェクトを作成する
-2. プロジェクトにアプリを作成する
-3. Firebaseで作られた、サービス構築に必要な情報を整理する
+1. リポジトリをforkする
+2. firebaseのプロジェクトを作成する
+3. プロジェクトにアプリを作成する
 4. Google PSIのAPIキーを取得する
 5. Vercelにプロジェクトを作成する
 
+## 1. リポジトリをforkする
 
-## 1. firebaseのプロジェクトを作成する
+## 2. firebaseのプロジェクトを作成する
 - https://console.firebase.google.com/u/0/
 
 1. プロジェクトを作成
@@ -42,7 +43,7 @@
 
 <img src="https://user-images.githubusercontent.com/1023421/193397433-d89eaa2d-4fc3-44dc-bc8e-b9da196b9d83.png" width="400">
 
-## 2. プロジェクトにアプリを作成する
+## 3. プロジェクトにアプリを作成する
 
 <img src="https://user-images.githubusercontent.com/1023421/193398376-1dde0caf-814b-41da-aa3f-def88bcaf0c1.png" width="400">
 
@@ -59,7 +60,6 @@
 
 <img src="https://user-images.githubusercontent.com/1023421/193399089-fc580a0c-4dab-41fd-acf6-2ffbbcbf8044.png" width="400">
 
-## 3. Firebaseで作られた、サービス構築に必要な情報を整理する
 それぞれの環境で必要になる、以下のFirebaseの情報を収集します。2-2で取得した情報を忘れた場合は、以下の取得方法を参考にして値を控えて下さい。
 | 参照名 | 使用箇所 | 取得方法 | ステータス |
 | :--- | :--- | :--- | :--- |
@@ -112,8 +112,42 @@ https://vercel.com/dashboard
 
 <img src="https://user-images.githubusercontent.com/1023421/193399800-e055c90a-60cf-4809-941c-c94d5f5ece03.png" width="400">
 
+4. 連携するプロジェクト名を入力して検索
+権限がないため、権限を追加する必要がある。
 
+<img src="https://user-images.githubusercontent.com/1023421/193400014-ae5ae9a7-5214-4718-aa93-71d686f88bb4.png" width="400">
 
+5. 今回forkしたオーガニゼーション（アカウント）を選択
+
+<img src="https://user-images.githubusercontent.com/1023421/193400059-fa8888a3-0634-4469-84ff-e566cae654b7.png" width="400">
+
+6. kickstart-frontのリポジトリを選択
+
+<img src="https://user-images.githubusercontent.com/1023421/193400299-07c3a7c0-3f94-4e6f-992c-ba4af70c68b3.png" width="400">
+
+7. Vercelにリポジトリをインポート
+権限を追加したのでインポートできるようになったので、インポートします。
+
+<img src="https://user-images.githubusercontent.com/1023421/193400346-53d90aef-ff30-42b0-813f-8500125fa877.png" width="400">
+
+8. 環境変数をセットしていきます
+
+<img src="https://user-images.githubusercontent.com/1023421/193400549-cc1f95ef-736f-4ad7-a230-e0735b8033f5.png" width="400">
+
+3-2で取得した値を以下の変数名で入力していきます。
+
+| 変数名 | 3-2の参照名 |
+| :--- | :--- |
+| NEXT_PUBLIC_FIREBASE_API_KEY | apiKey |
+| NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN | authDomain |
+| NEXT_PUBLIC_FIREBASE_PROJECT_ID | projectId |
+| NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET | storageBucket |
+| NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID | messagingSenderId |
+| NEXT_PUBLIC_FIREBASE_APP_ID | appId |
+
+9. デプロイします
+
+<img src="https://user-images.githubusercontent.com/1023421/193400888-3bb9f897-2363-4ed7-a6c2-259243f36cce.png" width="400">
 
 
 
