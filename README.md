@@ -309,9 +309,26 @@ $ npm run dev
 
 ## 9. mockサーバーのセットアップと起動
 
-modkのセットアップ
-mockサーバーの起動
-mockURLの設定
+### 1. mockサーバーの準備
+[kickstart-api](https://github.com/yokohama/kickstart-api/blob/main/README.md)を参考に、mockサーバーの準備をして下さい。
+
+### 2. mockサーバーの起動
+```
+$ cd ./kickstart-api
+$ prism mock ./openapi/root.yaml
+```
+
+### 3. nextの起動
+```
+$ cd ./kickstart-front
+$ npm run dev
+```
+
+### 4. ブラウザから確認
+
+<img src="https://user-images.githubusercontent.com/1023421/193437479-2c6d7088-2466-47ad-b480-2247eaaa7a0a.png" width="400">
+
+ブラウザから、`http://localhost:3000`にアクセスしてログイン後、`SETTINGS`から`APIコール`をクリック。開発ツールのネットワークでjsonデータが返ってきてれば、mockサーバーとの通信は成功しています。
 
 ## 10. デプロイ
 デプロイの仕方を書く
