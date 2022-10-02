@@ -63,6 +63,7 @@
 
 <img src="https://user-images.githubusercontent.com/1023421/193398499-fa7e2f6e-a764-43fc-b6e6-650866cf807f.png" width="400">
 
+<a id='kickstart-front-3-1' />
 
 ### 2. npmを選択して進む
 赤枠の情報は後ほど使用しますので、控えておいて下さい。
