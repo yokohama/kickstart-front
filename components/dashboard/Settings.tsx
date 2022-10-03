@@ -17,7 +17,8 @@ export const Settings = ({alertList, setAlertList}: DashboardProps) => {
   const handleOnClickApi = () => {
     currentUser?.getIdToken(true)
       .then(idToken => {
-        //console.log(idToken)
+        console.log(idToken)
+        console.log(`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/users`)
         fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_URL}/users`, {
           headers: { 'Authorization': `Bearer ${idToken}` }
         })
