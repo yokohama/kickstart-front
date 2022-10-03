@@ -10,7 +10,8 @@
 7. developmentのデプロイの環境を用意する
 8. ローカル開発環境の構築をする
 9. mockサーバーのセットアップと起動
-10. デプロイ
+10. API GatewayのURLをセットする
+11. デプロイ
 
 ## 1. リポジトリをforkする
 ### 1. githubからforkする。fork先名は解りやすく同じ名前にして下さい。もし変更する場合は、以降`kickstart-front`を`変更した名前`に読み替えて作業をおこなって下さい。
@@ -329,6 +330,13 @@ $ npm run dev
 <img src="https://user-images.githubusercontent.com/1023421/193437479-2c6d7088-2466-47ad-b480-2247eaaa7a0a.png" width="400">
 
 ブラウザから、`http://localhost:3000`にアクセスしてログイン後、`SETTINGS`から`APIコール`をクリック。開発ツールのネットワークでjsonデータが返ってきてれば、mockサーバーとの通信は成功しています。
+
+## 10. API GatewayのURLをセットする
+- この先、ローカルで開発したソースをVercel上のdevelopmentやproductionの環境にデプロイをしていきますが、その際にはVercel側で各環境毎に対応したAPI GatewayのURLをセットしておく必要があります。
+
+### 1. API GatewayのURLを環境分取得する。
+- [こちら]()より、先にインフラ構築とAPI Gatewayの構築をおこなって下さい。
+- 完了しましたら指示に従い、こちらに戻りデプロイを進めて下さい。
 
 ## 10. デプロイ
 
