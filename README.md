@@ -227,6 +227,8 @@ Vercelから発行されたURLにアクセスしてログインの動作確認�
 
 <img src="https://user-images.githubusercontent.com/1023421/193403329-ed6579da-7001-4de6-a527-af58a9c1f2a4.png" width="400">
 
+<a id="kickstart-front-7-2" />
+
 ### 2. サブドメインは自由に作成できるので、被らなそうな名前かつ解りやすい名前を入力して追加。
 
 <img src="https://user-images.githubusercontent.com/1023421/193403376-ed87b488-f203-4190-8a6d-00fc32933aab.png" width="400">
