@@ -339,6 +339,33 @@ $ npm run dev
 ### 1. API GatewayのURLを環境分取得する。
 - [こちら](https://github.com/yokohama/kickstart-api)より、先にインフラ構築とAPI Gatewayの構築をおこなって下さい。
 - 完了しましたら指示に従い、こちらに戻りデプロイを進めて下さい。
+- 以降、以下の情報が揃っている前提で進めます。
+- 
+| 参照名 | 使用箇所 | 取得方法 | ステータス |
+| :--- | :--- | :--- | :--- |
+| local APIGateway endpoint URL | front | awsコンソール > API Gateway > stage / prod | 取得済 |
+| local APIGateway endpoint URL | front | awsコンソール > API Gateway > stage / prod | 取得済 |
+| local APIGateway endpoint URL | front | awsコンソール > API Gateway > stage / prod | 取得済 |
+
+### 2. Vercelで変数を入力
+
+<img src="https://user-images.githubusercontent.com/1023421/193511009-199a7b64-c589-4c77-acbe-a30c851dd7a6.png" width="400" />
+
+- `Environment Variables`画面から以下の情報を追加します。
+| 変数名 | 参照名 |
+| :--- | :--- | :--- | :--- |
+| NEXT_PUBLIC_API_ENDPOINT_URL | dev APIGateway endpoint URL |
+| NEXT_PUBLIC_API_ENDPOINT_URL | prod APIGateway endpoint URL |
+
+- 変数名は同じですが、`ENVIRONMENT`のチェックによって、値を変えています。
+- `ENVIRONMENT`は、`Production`と`Preview`の２つ作成します。
+
+<img src="https://user-images.githubusercontent.com/1023421/193512157-0864e112-8200-4bc0-a704-db3a503631f2.png" width="400" />
+
+- 最終的に以下の様になっていればOKです。
+
+
+<img src="https://user-images.githubusercontent.com/1023421/193512471-ca02e096-39b7-47e3-9ee7-ecaf834779c5.png" width="400" />
 
 ## 10. デプロイ
 
