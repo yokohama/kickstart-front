@@ -335,7 +335,7 @@ $ npm run dev
 - この先、ローカルで開発したソースをVercel上のdevelopmentやproductionの環境にデプロイをしていきますが、その際にはVercel側で各環境毎に対応したAPI GatewayのURLをセットしておく必要があります。
 
 ### 1. API GatewayのURLを環境分取得する。
-- [こちら]()より、先にインフラ構築とAPI Gatewayの構築をおこなって下さい。
+- [こちら](https://github.com/yokohama/kickstart-api)より、先にインフラ構築とAPI Gatewayの構築をおこなって下さい。
 - 完了しましたら指示に従い、こちらに戻りデプロイを進めて下さい。
 
 ## 10. デプロイ
