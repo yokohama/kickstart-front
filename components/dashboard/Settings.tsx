@@ -56,3 +56,6 @@ export const Settings = ({alertList, setAlertList}: DashboardProps) => {
     </div>
   )
 }
+
+
+
