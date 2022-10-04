@@ -244,6 +244,8 @@ Vercelから発行されたURLにアクセスしてログインの動作確認�
 ### 5. 完了
 firebase側でこのドメインも許可するので控えておく。
 
+<a id="kickstart-front-7-5" />
+
 <img src="https://user-images.githubusercontent.com/1023421/193403487-ea6769f0-4c30-4778-9f64-a636c9f759ea.png" width="400">
 
 | 参照名 | 使用箇所 | 取得方法 | ステータス |
@@ -367,11 +369,65 @@ $ npm run dev
 
 <img src="https://user-images.githubusercontent.com/1023421/193512471-ca02e096-39b7-47e3-9ee7-ecaf834779c5.png" width="400" />
 
-## 10. デプロイ
+## 11. デプロイ
 
-### 1. API Gatewayの設定
-デプロイするためには、API Gatewayの設定が先に必要
+### 1. lib/componenst/Index.tsxを書き換える
 
-### 2. デプロイ方法
+```
+$ git diff components/Index.tsx
 
-### 3. 環境毎での動作確認
+diff --git a/components/Index.tsx b/components/Index.tsx
+index ad79efd..57c465e 100644
+--- a/components/Index.tsx
++++ b/components/Index.tsx
+@@ -10,7 +10,7 @@ export const Index = () => {
+       <div className='container mx-auto px-6 flex flex-col justify-between items-center relative py-8'>
+         <div className='flex flex-col'>
+           <h1 className='font-light w-full uppercase text-center text-4xl sm:text-5xl dark:text-white text-gray-800'>
+-            Next Support Production
++            Hello! Kickstart^M
+           </h1>
+           <h2 className='font-light max-w-2xl mx-auto w-full text-xl dark:text-white text-gray-500 text-center py-8'>
+             毎度、同じもの作るの面面倒なので、基本的に必要なるものをいれておきます。
+@@ -29,4 +29,4 @@ export const Index = () => {
+       </div>
+     </div>
+   )
+-}
+```
+
+### 2. ローカルで確認
+- 以下のコマンドを実行して、ブラウザから`http://localhost:3000`にアクセス
+```
+$ npm run dev
+```
+
+<img src="https://user-images.githubusercontent.com/1023421/193823033-bff4b419-9a54-453c-936d-53c65db4399b.png" width="400" />
+
+### 3. developmentにデプロイ
+```
+$ git add lib/components/Index.tsx
+$ git commit -m 'デプロイのテスト'
+$ git push origin development
+```
+
+### 4. vercel上でデプロイ進行の確認
+- デプロイ中になっている
+<img src="https://user-images.githubusercontent.com/1023421/193823745-af3047d7-2671-49a2-af5d-550070e06058.png" width="400" />
+
+### 5. devlopmentの公開URLでの確認
+- [7-5](#kickstart-front-7-5)で、取得したdevelopment用のURLにアクセスして確認。
+
+### 6. productionにデプロイ
+- kickstart-frontのGitHubをブラウザで開く
+- [こちら](https://github.com/yokohama/kickstart-cdk#kickstart-ckd-10-8)を参考に、ブラウザ上でmainブランチにマージする。
+
+### 7. vercel上でデプロイ進行の確認
+- デプロイ中になっている
+<img src="https://user-images.githubusercontent.com/1023421/193825370-da030183-b246-4cc3-8f4b-c37dc5fd1bf4.png" width="400" />
+
+### 8. productionの公開URLでの確認
+- [7-5](#kickstart-front-7-5)で、取得したproduction用のURLにアクセスして確認。
+
+
+
