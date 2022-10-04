@@ -10,8 +10,8 @@
 7. developmentのデプロイの環境を用意する
 8. ローカル開発環境の構築をする
 9. mockサーバーのセットアップと起動
-10. デプロイ
-11. API Gatewayの設定
+10. API GatewayのURLをセットする
+11. デプロイ
 
 ## 1. リポジトリをforkする
 ### 1. githubからforkする。fork先名は解りやすく同じ名前にして下さい。もし変更する場合は、以降`kickstart-front`を`変更した名前`に読み替えて作業をおこなって下さい。
@@ -63,6 +63,7 @@
 
 <img src="https://user-images.githubusercontent.com/1023421/193398499-fa7e2f6e-a764-43fc-b6e6-650866cf807f.png" width="400">
 
+<a id='kickstart-front-3-1' />
 
 ### 2. npmを選択して進む
 赤枠の情報は後ほど使用しますので、控えておいて下さい。
@@ -226,6 +227,8 @@ Vercelから発行されたURLにアクセスしてログインの動作確認�
 
 <img src="https://user-images.githubusercontent.com/1023421/193403329-ed6579da-7001-4de6-a527-af58a9c1f2a4.png" width="400">
 
+<a id="kickstart-front-7-2" />
+
 ### 2. サブドメインは自由に作成できるので、被らなそうな名前かつ解りやすい名前を入力して追加。
 
 <img src="https://user-images.githubusercontent.com/1023421/193403376-ed87b488-f203-4190-8a6d-00fc32933aab.png" width="400">
@@ -309,15 +312,66 @@ $ npm run dev
 
 ## 9. mockサーバーのセットアップと起動
 
-modkのセットアップ
-mockサーバーの起動
-mockURLの設定
+### 1. mockサーバーの準備
+[kickstart-api](https://github.com/yokohama/kickstart-api/blob/main/README.md)を参考に、mockサーバーの準備をして下さい。
+
+### 2. mockサーバーの起動
+```
+$ cd ./kickstart-api
+$ prism mock ./openapi/root.yaml
+```
+
+### 3. nextの起動
+```
+$ cd ./kickstart-front
+$ npm run dev
+```
+
+### 4. ブラウザから確認
+
+<img src="https://user-images.githubusercontent.com/1023421/193437479-2c6d7088-2466-47ad-b480-2247eaaa7a0a.png" width="400">
+
+ブラウザから、`http://localhost:3000`にアクセスしてログイン後、`SETTINGS`から`APIコール`をクリック。開発ツールのネットワークでjsonデータが返ってきてれば、mockサーバーとの通信は成功しています。
+
+## 10. API GatewayのURLをセットする
+- この先、ローカルで開発したソースをVercel上のdevelopmentやproductionの環境にデプロイをしていきますが、その際にはVercel側で各環境毎に対応したAPI GatewayのURLをセットしておく必要があります。
+
+### 1. API GatewayのURLを環境分取得する。
+- [こちら](https://github.com/yokohama/kickstart-api)より、先にインフラ構築とAPI Gatewayの構築をおこなって下さい。
+- 完了しましたら指示に従い、こちらに戻りデプロイを進めて下さい。
+- 以降、以下の情報が揃っている前提で進めます。
+- 
+| 参照名 | 使用箇所 | 取得方法 | ステータス |
+| :--- | :--- | :--- | :--- |
+| local APIGateway endpoint URL | front | awsコンソール > API Gateway > stage / prod | 取得済 |
+| local APIGateway endpoint URL | front | awsコンソール > API Gateway > stage / prod | 取得済 |
+| local APIGateway endpoint URL | front | awsコンソール > API Gateway > stage / prod | 取得済 |
+
+### 2. Vercelで変数を入力
+
+<img src="https://user-images.githubusercontent.com/1023421/193511009-199a7b64-c589-4c77-acbe-a30c851dd7a6.png" width="400" />
+
+- `Environment Variables`画面から以下の情報を追加します。
+| 変数名 | 参照名 |
+| :--- | :--- | :--- | :--- |
+| NEXT_PUBLIC_API_ENDPOINT_URL | dev APIGateway endpoint URL |
+| NEXT_PUBLIC_API_ENDPOINT_URL | prod APIGateway endpoint URL |
+
+- 変数名は同じですが、`ENVIRONMENT`のチェックによって、値を変えています。
+- `ENVIRONMENT`は、`Production`と`Preview`の２つ作成します。
+
+<img src="https://user-images.githubusercontent.com/1023421/193512157-0864e112-8200-4bc0-a704-db3a503631f2.png" width="400" />
+
+- 最終的に以下の様になっていればOKです。
+
+
+<img src="https://user-images.githubusercontent.com/1023421/193512471-ca02e096-39b7-47e3-9ee7-ecaf834779c5.png" width="400" />
 
 ## 10. デプロイ
-デプロイの仕方を書く
 
-デプロイ完了の動作確認方法を書く
+### 1. API Gatewayの設定
+デプロイするためには、API Gatewayの設定が先に必要
 
+### 2. デプロイ方法
 
-
-## 11. API Gatewayの設定
+### 3. 環境毎での動作確認
