@@ -374,7 +374,7 @@ $ npm run dev
 ### 1. lib/componenst/Index.tsxを書き換える
 
 ```
-$ git diff lib/components/Index.tsx
+$ git diff components/Index.tsx
 
 diff --git a/components/Index.tsx b/components/Index.tsx
 index ad79efd..57c465e 100644
