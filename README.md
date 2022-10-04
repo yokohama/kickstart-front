@@ -374,7 +374,7 @@ $ npm run dev
 ### 1. lib/componenst/Index.tsxを書き換える
 
 ```
-$ git diff lib/components/Index.tsx
+$ git diff components/Index.tsx
 
 diff --git a/components/Index.tsx b/components/Index.tsx
 index ad79efd..57c465e 100644
@@ -411,15 +411,22 @@ $ git commit -m 'デプロイのテスト'
 $ git push origin development
 ```
 
-### 4. vercel上で確認
+### 4. vercel上でデプロイ進行の確認
 - デプロイ中になっている
 <img src="https://user-images.githubusercontent.com/1023421/193823745-af3047d7-2671-49a2-af5d-550070e06058.png" width="400" />
 
 ### 5. devlopmentの公開URLでの確認
 - [7-5](#kickstart-front-7-5)で、取得したdevelopment用のURLにアクセスして確認。
 
+### 6. productionにデプロイ
+- kickstart-frontのGitHubをブラウザで開く
+- [こちら](https://github.com/yokohama/kickstart-cdk#kickstart-ckd-10-8)を参考に、ブラウザ上でmainブランチにマージする。
 
-### 7. productionの公開URLでの確認
+### 7. vercel上でデプロイ進行の確認
+- デプロイ中になっている
+<img src="https://user-images.githubusercontent.com/1023421/193825370-da030183-b246-4cc3-8f4b-c37dc5fd1bf4.png" width="400" />
+
+### 8. productionの公開URLでの確認
 - [7-5](#kickstart-front-7-5)で、取得したproduction用のURLにアクセスして確認。
 
 
