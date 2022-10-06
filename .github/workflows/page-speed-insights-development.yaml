@@ -1,4 +1,4 @@
-name: '[ Development ] Page Seed Insight'
+name: '[ Development ] Lighthouse'
 
 on: 
   push:
