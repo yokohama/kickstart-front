@@ -1,5 +1,5 @@
 inputs:
-  urls:
+  url:
     description: ''
     required: true
   #mobile_threshold:
@@ -18,7 +18,7 @@ runs:
     - name: Lighthouse
       uses: foo-software/lighthouse-check-action@master
       with:
-        urls: {{ $inputs.urls }}
+        urls: 'https://kickstart-front-dev.vercel.app/'
     #- name: "[ Mobile ] ${{ inputs.url }}"
     #  uses: jakepartusch/psi-action@v1.2
     #  id: mobile_page_speed_insigths

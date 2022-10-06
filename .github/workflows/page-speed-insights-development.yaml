@@ -33,4 +33,4 @@ jobs:
       - name: Lighthouse
         uses: ./.github/actions/psi
         with:
-          urls: ${{ secrets.DEVELOPMENT_URL }}
+          url: ${{ secrets.DEVELOPMENT_URL }}
