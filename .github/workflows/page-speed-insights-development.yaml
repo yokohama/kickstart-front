@@ -6,27 +6,26 @@ on:
       - development
 
 jobs:
-  #Main-Page-Speed-Insight:
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - name: "Checkout"
-  #      uses: actions/checkout@v3
-
-  #    - name: "Running Page Speed Insights"
-  #      uses: ./.github/actions/psi
-  #      with:
-  #        url: ${{ secrets.DEVELOPMENT_URL }}
-  #        mobile_threshold: 90
-  #        desktop_threshold: 90
-  #        key: ${{ secrets.PSI_APIKEY }}
-
-  lighthouse:
+  Main-Page-Speed-Insight:
     runs-on: ubuntu-latest
     steps:
-    - name: "Checkout"
-    - uses: actions/checkout@v3
+      - name: "Checkout"
+        uses: actions/checkout@v3
+      - name: "Running Page Speed Insights"
+        uses: ./.github/actions/psi
+        with:
+          url: ${{ secrets.DEVELOPMENT_URL }}
+          mobile_threshold: 90
+          desktop_threshold: 90
+          key: ${{ secrets.PSI_APIKEY }}
 
-    - name: Lighthouse
-      uses: foo-software/lighthouse-check-action@master
-      with:
-        urls: 'https://kickstart-front-dev.vercel.app'
+  #lighthouse:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #  - name: "Checkout"
+  #    uses: actions/checkout@v3
+  #
+  #  - name: Lighthouse
+  #    uses: foo-software/lighthouse-check-action@master
+  #    with:
+  #      urls: 'https://kickstart-front-dev.vercel.app'
