@@ -2,11 +2,18 @@ inputs:
   url:
     description: ''
     required: true
+  gitHubAccessToken:
+    description: ''
+    required: true
 
 runs:
-  using: "composite"
+  using: composite
   steps:
     - name: Lighthouse
       uses: foo-software/lighthouse-check-action@master
       with:
         urls: ${{ inputs.url }}
+        device: all
+        gitHubAccessToken: ${{ inputs.gitHubAccessToken }}
+        prCommentEnabled: true
+        prCommentSaveOld: true
