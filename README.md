@@ -4,15 +4,14 @@
 1. リポジトリをforkする
 2. firebaseのプロジェクトを作成する
 3. プロジェクトにアプリを作成する
-4. Google PSIのAPIキーを取得する
-5. Vercelにプロジェクトを作成して公開する
-6. 公開したURLをfirebase側で許可する
-7. developmentのデプロイの環境を用意する
-8. ローカル開発環境の構築をする
-9. mockサーバーのセットアップと起動
-10. API GatewayのURLをセットする
-11. デプロイ
-12. API再構築の際の注意
+4. Vercelにプロジェクトを作成して公開する
+5. 公開したURLをfirebase側で許可する
+6. developmentのデプロイの環境を用意する
+7. ローカル開発環境の構築をする
+8. mockサーバーのセットアップと起動
+9. API GatewayのURLをセットする
+10. デプロイ
+11. API再構築の際の注意
 
 ## 1. リポジトリをforkする
 ### 1. githubからforkする。
@@ -83,41 +82,10 @@ forkした先のリポジトリに、`development`ブランチを作成して下
 | storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 |  |
 | Vercel development url | front / github acstions / secrets | versel / Settings / Domains |  |
 | Vercel production url | front / github acstions / secrets | versel / Settings / Domains |  |
 
-
-## 4. Google PSIのAPIキーを取得する
-
-### 1. サイトにアクセス
-https://developers.google.com/speed/docs/insights/v5/get-started
-
-<img src="https://user-images.githubusercontent.com/1023421/193399235-e26e4a63-2856-4dbd-b2ca-7f64ac563b1c.png" width="400">
-
-### 2. 2で作成したプロジェクトを選択して作成
-
-<img src="https://user-images.githubusercontent.com/1023421/193399300-e8b3e3ff-3d92-4526-a813-291e43960a57.png" width="400">
-
-### 3. APIキーを取得する
-この内容はメモしておいて下さい。
-
-<img src="https://user-images.githubusercontent.com/1023421/193399373-11be433f-dd69-4888-8ebc-9c17054e24ad.png" width="400">
-
-| 参照名 | 使用箇所 | 取得方法 | ステータス |
-| :--- | :--- | :--- | :--- |
-| apiKey | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| authDomain | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| projectId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
-| Vercel development url | front / github acstions / secrets | versel / Settings / Domains |  |
-| Vercel production url | front / github acstions / secrets | versel / Settings / Domains |  |
-
-
-## 5. Vercelにプロジェクトを作成する
+## 4. Vercelにプロジェクトを作成する
 
 ### 1. サイトにアクセス
 https://vercel.com/dashboard
@@ -176,7 +144,7 @@ https://vercel.com/dashboard
 
 <img src="https://user-images.githubusercontent.com/1023421/193401238-b14f390d-3e72-45da-bf50-48196a8e5c15.png" width="400">
 
-## 6. 公開したURLをfirebase側で許可する
+## 5. 公開したURLをfirebase側で許可する
 
 ### 1. Vercelから与えられたドメインを確認する
 <img src="https://user-images.githubusercontent.com/1023421/193401804-ffb42c14-3915-4930-b7b8-553a0c86d3d3.png" width="400">
@@ -194,7 +162,6 @@ https://vercel.com/dashboard
 | storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
 | Vercel development url | front / github acstions / secrets | versel / Settings / Domains |  |
 | Vercel production url | front / github acstions / secrets | versel / Settings / Domains | 取得済 |
 
@@ -224,7 +191,7 @@ Vercelから発行されたURLにアクセスしてログインの動作確認�
 
 <img src="https://user-images.githubusercontent.com/1023421/193402437-c062bd64-1dd1-4cc0-bec8-7eca57dfddde.png" width="400">
 
-## 7. developmentブランチのデプロイの環境を用意する
+## 6. developmentブランチのデプロイの環境を用意する
 1-2で、既にdevelopmentブランチが作成されている前提です。まだの場合は先に作成して下さい。
 
 ### 1. Vercelにdevelopment用のドメインを追加
@@ -260,13 +227,12 @@ firebase側でこのドメインも許可するので控えておく。
 | storageBucket | front /.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | messagingSenderId | frontの.env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
 | appId | front / .env.local | firebase > プロジェクトの概要 > プロジェクトの設定 > マイアプリ | 取得済 |
-| PSI apiKey | front / github acstions / secrets | 4の手順を参考に再発行 | 取得済 |
 | Vercel development url | front / github acstions / secrets | versel / Settings / Domains | 取得済 |
 | Vercel production url | front / github acstions / secrets | versel / Settings / Domains | 取得済 |
 
 ### 6. firebase側でdevelopment用のURLを許可する
 
-6を参考にして、7-5で作成したdevelopment用のドメインをfirebaseに追加して下さい。firebase側で以下の様になっていればOKです。
+6を参考にして、6-5で作成したdevelopment用のドメインをfirebaseに追加して下さい。firebase側で以下の様になっていればOKです。
 
 <img src="https://user-images.githubusercontent.com/1023421/193403603-6d6a58cb-6f28-4aa1-9993-d8e4a95dc3da.png" width="400">
 
@@ -274,18 +240,17 @@ firebase側でこのドメインも許可するので控えておく。
 
 <img src="https://user-images.githubusercontent.com/1023421/193410129-64e79121-90d8-4d48-a433-68343a48e107.png" width="400">
 
-7-4までで、取得済みの内容を以下のようにセットします。
+6-4までで、取得済みの内容を以下のようにセットします。
 
-| 変数名 | 7-4の参照名 |
+| 変数名 | 6-4の参照名 |
 | :--- | :--- |
 | DEVELOPMENT_URL | Vercel development url |
 | PRODUCTION_URL | Vercel production url |
-| PSI_APIKEY | PSI apoiKey |
 
 <img src="https://user-images.githubusercontent.com/1023421/193410352-29342f94-7bd6-4877-9958-d1511609fa60.png" width="400">
 
 
-## 8. ローカル開発環境の構築をする
+## 7. ローカル開発環境の構築をする
 
 ### 1. .env.localファイルを用意する
 ```
@@ -316,7 +281,7 @@ $ npm run dev
 ```
 これで、firebaseを使用したログインまで動作確認ができます。
 
-## 9. mockサーバーのセットアップと起動
+## 8. mockサーバーのセットアップと起動
 
 ### 1. mockサーバーの準備
 [kickstart-api](https://github.com/yokohama/kickstart-api/blob/main/README.md)を参考に、mockサーバーの準備をして下さい。
@@ -341,7 +306,7 @@ $ npm run dev
 
 <a id="kickstart-front-10" />
 
-## 10. API GatewayのURLをセットする
+## 9. API GatewayのURLをセットする
 - この先、ローカルで開発したソースをVercel上のdevelopmentやproductionの環境にデプロイをしていきますが、その際にはVercel側で各環境毎に対応したAPI GatewayのURLをセットしておく必要があります。
 
 ### 1. API GatewayのURLを環境分取得する。
@@ -377,7 +342,7 @@ $ npm run dev
 
 <a id="kickstart-front-11" />
 
-## 11. デプロイ
+## 10. デプロイ
 
 ### 1. lib/componenst/Index.tsxを書き換える
 
@@ -437,6 +402,6 @@ $ git push origin development
 ### 8. productionの公開URLでの確認
 - [7-5](#kickstart-front-7-5)で、取得したproduction用のURLにアクセスして確認。
 
-## 12. API再構築の際の注意
+## 11. API再構築の際の注意
 - ここまでの作業終えた後に、APIの再構築が発生した際は、[kickstart-front-10](#kickstart-front-10)と、[kickstart-front-11](#kickstart-front-11)の作業もやり直す必要が有ります。
 
