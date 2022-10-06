@@ -16,4 +16,3 @@ jobs:
         uses: ./.github/actions/lighthouse
         with:
           url: ${{ secrets.PRODUCTION_URL }}
-
