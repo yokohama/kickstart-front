@@ -12,10 +12,14 @@
 9. mockサーバーのセットアップと起動
 10. API GatewayのURLをセットする
 11. デプロイ
+12. API再構築の際の注意
 
 ## 1. リポジトリをforkする
-### 1. githubからforkする。fork先名は解りやすく同じ名前にして下さい。もし変更する場合は、以降`kickstart-front`を`変更した名前`に読み替えて作業をおこなって下さい。
-### 2. forkした先のリポジトリに、`development`ブランチを作成して下さい。
+### 1. githubからforkする。
+fork先名は解りやすく同じ名前にして下さい。もし変更する場合は、以降`kickstart-front`を`変更した名前`に読み替えて作業をおこなって下さい。
+
+### 2. ブランチの作成
+forkした先のリポジトリに、`development`ブランチを作成して下さい。
 
 ## 2. firebaseのプロジェクトを作成する
 - https://console.firebase.google.com/u/0/
@@ -335,6 +339,8 @@ $ npm run dev
 
 ブラウザから、`http://localhost:3000`にアクセスしてログイン後、`SETTINGS`から`APIコール`をクリック。開発ツールのネットワークでjsonデータが返ってきてれば、mockサーバーとの通信は成功しています。
 
+<a id="kickstart-front-10" />
+
 ## 10. API GatewayのURLをセットする
 - この先、ローカルで開発したソースをVercel上のdevelopmentやproductionの環境にデプロイをしていきますが、その際にはVercel側で各環境毎に対応したAPI GatewayのURLをセットしておく必要があります。
 
@@ -368,6 +374,8 @@ $ npm run dev
 
 
 <img src="https://user-images.githubusercontent.com/1023421/193512471-ca02e096-39b7-47e3-9ee7-ecaf834779c5.png" width="400" />
+
+<a id="kickstart-front-11" />
 
 ## 11. デプロイ
 
@@ -429,5 +437,6 @@ $ git push origin development
 ### 8. productionの公開URLでの確認
 - [7-5](#kickstart-front-7-5)で、取得したproduction用のURLにアクセスして確認。
 
-
+## 12. API再構築の際の注意
+- ここまでの作業終えた後に、APIの再構築が発生した際は、[kickstart-front-10](#kickstart-front-10)と、[kickstart-front-11](#kickstart-front-11)の作業もやり直す必要が有ります。
 

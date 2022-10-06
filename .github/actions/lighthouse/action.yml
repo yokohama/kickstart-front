@@ -1,0 +1,12 @@
+inputs:
+  url:
+    description: ''
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Lighthouse
+      uses: foo-software/lighthouse-check-action@master
+      with:
+        urls: ${{ inputs.url }}
